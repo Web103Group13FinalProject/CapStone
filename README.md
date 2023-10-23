@@ -42,7 +42,23 @@ The app should allow users to like and comment on other users' posts.
 
 [gif goes here]
 
-### [ADDITIONAL FEATURES GO HERE - ADD ALL FEATURES HERE IN THE FORMAT ABOVE; you will check these off and add gifs as you complete them]
+### Edit user information
+
+The app should allow users to edit their profile information such as bio, name, and profile picture.
+
+[gif goes here]
+
+### Tag posts
+
+The app will allow users to place tags on their posts so that other users can view posts with those tags.
+
+[gif goes here]
+
+### Toast notifications
+
+When a user publishes a post, there will be a toast notification saying their post has been uploaded.
+
+[gif goes here]
 
 ## Installation Instructions
 
