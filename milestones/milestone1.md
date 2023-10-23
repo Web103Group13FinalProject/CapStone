@@ -20,12 +20,12 @@ This unit, be sure to complete all tasks listed below. To complete a task, place
 
 ### 1. What went well during this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+[We were able to easily set up communication beforehand and share the repo to get started. We managed to generate soem ideas for the project as well as the user stories and got them on the planning markdown document.]
 
 ### 2. What were some challenges your group faced in this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+[There were a few challeneges getting collaborators on the repo but it worked out. There also a few challenges to come up with features for the final project.]
 
 ### 3. What additional support will you need in upcoming units as you continue to work on your final project?
 
-[👉🏾👉🏾👉🏾 your answer here]
+[I think it would be nice to get some lectures on user authentication and some clarifications on what tools we can and can't use.]
