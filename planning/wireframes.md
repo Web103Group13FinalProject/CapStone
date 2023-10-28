@@ -4,18 +4,20 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 
 ## List of Pages
 
-[👉🏾👉🏾👉🏾 List the pages you expect to have in your app, with a ⭐ next to pages you have wireframed]
+- Front page ⭐
+- Profile page ⭐
+- Login page ⭐
+- Sign up page
+- Create post page
 
-## Wireframe 1: [page title]
+## Wireframe 1: Front page
 
-[👉🏾👉🏾👉🏾 include wireframe 1]
+![Front page](../assets/front-page.png)
 
-## Wireframe 2: [page title]
+## Wireframe 2: Profile page
 
-[👉🏾👉🏾👉🏾 include wireframe 2]
+![User profile](../assets/profile_page.png)
 
-## Wireframe 3: [page title]
+## Wireframe 3: Login page
 
-[👉🏾👉🏾👉🏾 include wireframe 3]
-
-[👉🏾👉🏾👉🏾 include more wireframes as desired]
+![Login page](../assets/login_page.png)

@@ -4,7 +4,9 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 
 ## Create the List of Tables
 
-[👉🏾👉🏾👉🏾 List each table in your diagram]
+- Posts
+- Users
+- Tags
 
 ## Add the Entity Relationship Diagram
 
