@@ -6,16 +6,24 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 
 [👉🏾👉🏾👉🏾 List the pages you expect to have in your app, with a ⭐ next to pages you have wireframed]
 
-## Wireframe 1: [page title]
+Front Page
 
-[👉🏾👉🏾👉🏾 include wireframe 1]
+Login Page
 
-## Wireframe 2: [page title]
+Profile Page
 
-[👉🏾👉🏾👉🏾 include wireframe 2]
+## Hold command and click on the pathways to see the images or go to the milestone2_img folder
 
-## Wireframe 3: [page title]
+## Wireframe 1: [front page]
 
-[👉🏾👉🏾👉🏾 include wireframe 3]
+![\[👉🏾👉🏾👉🏾 include wireframe 1\]](../milestone2_img/front-page.png)
+
+## Wireframe 2: [login page]
+
+![\[👉🏾👉🏾👉🏾 include wireframe 2\]](../milestone2_img/login_page.png)
+
+## Wireframe 3: [profile page]
+
+![Alt text](../milestone2_img/profile_page.png)
 
 [👉🏾👉🏾👉🏾 include more wireframes as desired]

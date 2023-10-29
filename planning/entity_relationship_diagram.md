@@ -7,7 +7,7 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 Table Users {
   UserID int [pk, increment]
   Username varchar(255)
-  Password varchar(255)  // Remember, in real-life, hash the passwords
+  Password varchar(255)  
   ProfilePicture varchar(255)
   Bio text
 }
@@ -54,5 +54,7 @@ Table PostShares {
 
 
 ## Add the Entity Relationship Diagram
+
+## Hold command and click on the screenshot to see the image or go to the milestone2_img folder
 
 ![Alt text](<Screenshot 2023-10-29 at 5.45.50 PM-1.png>)
