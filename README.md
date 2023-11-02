@@ -1,4 +1,4 @@
-# PostGrid
+# MealMaster
 
 CodePath WEB103 Final Project
 
@@ -10,11 +10,17 @@ Designed and developed by: Michael, Sushant
 
 ### Description and Purpose
 
-PostGrid is a social media platform that allows users to post text and/or image content in the form of a post to a grid. Users can create an account, log in, and post content to their grid. Users can also view other users' grids and like their posts. Users can also comment on other users' posts.
+MealMaster is a culinary companion platform designed to help users explore, organize, and master their cooking journey. Users can create an account, log in, and utilize various features related to meal planning and recipe sharing. With MealMaster, users can:
+
+Discover and Share Recipes: Users can explore a diverse collection of recipes from various cuisines and share their own culinary creations.
+Plan Meals: Create personalized meal plans for the week, making it easy to organize and prepare delicious dishes.
+Collaborate with Friends and Family: Share meal plans and recipes with friends and family, making cooking a collaborative and enjoyable experience.
+Rate and Review Recipes: Users can provide ratings and reviews for recipes they've tried, helping others make informed choices.
+Find Culinary Inspiration: Whether you're a seasoned chef or a novice in the kitchen, MealMaster provides a space to find inspiration and enhance your cooking skills.
 
 ### Inspiration
 
-The inspiration for this was to have posting features like Twitter and Instagram, but have a display feature sort of like Pintrest where all posts would be displyed in some grid pattern. 
+The inspiration for MealMaster stems from the desire to create a user-friendly platform that combines the best aspects of culinary social media, meal planning, and recipe sharing.
 
 ## Tech Stack
 
@@ -38,7 +44,7 @@ The app should allow users to publish posts to their grid.
 
 ### Interact with Posts
 
-The app should allow users to like and comment on other users' posts.
+The app should allow users to share and comment on other users' posts.
 
 [gif goes here]
 
@@ -50,7 +56,7 @@ The app should allow users to edit their profile information such as bio, name, 
 
 ### Tag posts
 
-The app will allow users to place tags on their posts so that other users can view posts with those tags.
+The app will allow users to search for meals based on key words
 
 [gif goes here]
 
