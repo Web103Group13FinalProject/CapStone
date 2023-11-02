@@ -25,8 +25,8 @@ User: a user who can create an account, log in, and post recipes to their grid. 
 
 7. As a registered user, I want to be able to categorize my recipes by cuisine or type (e.g., breakfast, lunch, dessert), so that I can easily organize and find them later.
 
-8. As a registered user, I want to be able to search for recipes by name, ingredient, or cuisine, so that I can easily find what I'm looking for.
+8. As a registered user, I want to be able to filter for recipes by category so that I can easily find what I'm looking for.
 
 9. As a registered user, I want to be able to rate and review the recipe, so that other users can see my feedback and make informed decisions.
 
-10. As a registered user, I want to see visual content like images or videos attached to a recipe, so that I can better understand the recipe or see the expected outcome.
+10. As a registered user, I want to see visual content like images attached to a recipe, so that I can better understand the recipe or see the expected outcome.
