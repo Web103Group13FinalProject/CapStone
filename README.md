@@ -34,6 +34,8 @@ Backend:
 
 Should start on backend first to setup database.
 
+![Backend server demo gif](./Brainstorming/milestone3_gif/milestone3.gif)
+
 ### User Authentication
 
 The app should allow people to login/sign up so their personal information is connected to their account.
