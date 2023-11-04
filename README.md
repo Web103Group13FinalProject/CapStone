@@ -36,37 +36,55 @@ Should start on backend first to setup database.
 
 ### User Authentication
 
-The app should allow people to login so each post is connected to a user who can like and comment on other posts.
+The app should allow people to login/sign up so their personal information is connected to their account.
 
 [gif goes here]
 
-### Publish Posts
+### Add recipies
 
-The app should allow users to publish posts to their grid.
-
-[gif goes here]
-
-### Interact with Posts
-
-The app should allow users to share and comment on other users' posts.
+The app should allow users to add their own recipies, so they can refer back to them and share with others.
 
 [gif goes here]
 
-### Edit user information
+### View recipies
 
-The app should allow users to edit their profile information such as bio, name, and profile picture.
-
-[gif goes here]
-
-### Tag posts
-
-The app will allow users to search for meals based on key words
+The app should allow users to view recipies, so they can cook using the recipies.
 
 [gif goes here]
 
-### Toast notifications
+### Edit recipies
 
-When a user publishes a post, there will be a toast notification saying their post has been uploaded.
+The app should allow users to edit recipies, so they can make corrections or improvements.
+
+[gif goes here]
+
+### Delete recipies
+
+The app should allow users to delete recipies, so they can remove recipies they no longer want.
+
+[gif goes here]
+
+### Create meal plan
+
+The app should allow users to create a meal plan by selecting recipies from their saved recipies and organize them for the week.
+
+[gif goes here]
+
+### Categorize recipies
+
+The app should allow users to categorize their recipies by cuisine or type (e.g., breakfast, lunch, dessert), so they can easily organize and find them later.
+
+[gif goes here]
+
+### Filter recipies
+
+The app should allow users to filter for recipies by category so that they can easily find what they're looking for.
+
+[gif goes here]
+
+### Rate and review recipies
+
+The app should allow users to rate and review recipies, so that other users can see their feedback and make informed decisions.
 
 [gif goes here]
 
