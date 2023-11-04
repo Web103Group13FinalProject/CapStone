@@ -40,51 +40,46 @@ The app should allow people to login/sign up so their personal information is co
 
 [gif goes here]
 
-### Add recipies
+### Add recipes
 
-The app should allow users to add their own recipies, so they can refer back to them and share with others.
-
-[gif goes here]
-
-### View recipies
-
-The app should allow users to view recipies, so they can cook using the recipies.
+The app should allow users to add their own recipes, so they can refer back to them and share with others.
 
 [gif goes here]
 
-### Edit recipies
+### View recipes
 
-The app should allow users to edit recipies, so they can make corrections or improvements.
+The app should allow users to view recipes, so they can cook using the recipes.
 
 [gif goes here]
 
-### Delete recipies
+### Edit recipes
 
-The app should allow users to delete recipies, so they can remove recipies they no longer want.
+The app should allow users to edit recipes, so they can make corrections or improvements.
+
+[gif goes here]
+
+### Delete recipes
+
+The app should allow users to delete recipes, so they can remove recipes they no longer want.
 
 [gif goes here]
 
 ### Create meal plan
 
-The app should allow users to create a meal plan by selecting recipies from their saved recipies and organize them for the week.
+The app should allow users to create a meal plan by selecting recipes from their saved recipes and organize them for the week.
 
 [gif goes here]
 
-### Categorize recipies
 
-The app should allow users to categorize their recipies by cuisine or type (e.g., breakfast, lunch, dessert), so they can easily organize and find them later.
+### Filter recipes
 
-[gif goes here]
-
-### Filter recipies
-
-The app should allow users to filter for recipies by category so that they can easily find what they're looking for.
+The app should allow users to filter for recipes by category so that they can easily find what they're looking for.
 
 [gif goes here]
 
-### Rate and review recipies
+### Rate and review recipes
 
-The app should allow users to rate and review recipies, so that other users can see their feedback and make informed decisions.
+The app should allow users to rate and review recipes, so that other users can see their feedback and make informed decisions.
 
 [gif goes here]
 
