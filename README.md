@@ -30,6 +30,10 @@ Backend:
 
 ## Features
 
+### Get started on backend ✅
+
+Should start on backend first to setup database.
+
 ### User Authentication
 
 The app should allow people to login so each post is connected to a user who can like and comment on other posts.
