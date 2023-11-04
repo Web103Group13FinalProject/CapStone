@@ -34,7 +34,7 @@ Backend:
 
 Should start on backend first to setup database.
 
-![Server demo gif](./Brainstorming/milestone3_gif/milestone3.gif)
+![Backend server demo gif](./Brainstorming/milestone3_gif/milestone3.gif)
 
 ### User Authentication
 
