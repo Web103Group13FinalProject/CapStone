@@ -26,7 +26,8 @@ VALUES ('Vegan'),
        ('Dessert'),
        ('Low-Carb'),
        ('Mediterranean'),
-       ('Raw-Food');
+       ('Raw-Food'),
+       ('None of the Above');
        
 
 
@@ -37,7 +38,13 @@ CREATE TABLE post(
     ingredients TEXT NOT NULL,
     instructions TEXT NOT NULL,
     user_id INTEGER REFERENCES user(id) NOT NULL,
-    category_id INTEGER REFERENCES category(id) NOT NULL
+);
+
+--JOIN table for Post and Category
+CREATE TABLE post_category (
+    post_id INTEGER REFERENCES post(id) NOT NULL,
+    category_id INTEGER REFERENCES category(id) NOT NULL,
+    PRIMARY KEY (post_id, category_id)
 );
 
 --Meal_Plan Table

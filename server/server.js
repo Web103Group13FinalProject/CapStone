@@ -1,22 +1,60 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import { PostController } from './src/controllers/Post.js';
+import { PostRoutes } from './src/routes/post.js'
 
 dotenv.config()
 const port = process.env.PORT;
 
-const app = express()
+const corsOptions = {
+    origin: (origin, callback) => {
+      const allowedOrigins = "https://meal-master.vercel.app";
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      } 
+    },
+  }; 
 
-app.use(express.json())
+const server = express()
+server.use(express.json())
+server.use(cors(corsOptions))
 
-app.use(cors())
+const PostControllers = new PostController();
 
-app.get('/', (req,res) =>{
+server.get('/', (req,res) =>{
     res.status(200).send('<h1 style="text-align: center; margin-top: 50px;"> Whippin in the Kitchen API</h1>')
 })
 
-const PORT = process.env.PORT || 4000
+//server for posts
+server.get(PostRoutes.getAllPosts, (req, res) => {
+    PostControllers.getAllPosts(req, res)
+});
 
-app.listen(PORT, () => {
-    console.log(`server running on http://localhost:${PORT}`)
+server.get(PostRoutes.getPostById, (req, res) => {
+    PostControllers.getPostById(req, res)
+});
+
+server.post(PostRoutes.createPost, (req, res) => {
+    const data = req.body
+    PostControllers.createPost(req, res, data)
+});
+
+server.put(PostRoutes.updatePostById, (req ,res) => {
+    const data = req.params
+    const id = req.params.id
+    PostControllers.updatePostById(req, res, data, id)
+})
+
+server.delete(PostRoutes.deletePostById, (req, res) => {
+    const id = req.params.id
+    PostControllers.deletePostById(req, res, id)
+})
+
+
+
+server.listen(port, () => {
+    console.log(`server running on http://localhost:${port}`)
 })
