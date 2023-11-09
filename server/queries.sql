@@ -1,11 +1,12 @@
 --User Table
-CREATE TABLE user(
-    id SERIAL Primary KEY,
+CREATE TABLE member (
+    id SERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL
 );
+
 
 --Category Table
 CREATE TABLE category(
@@ -32,13 +33,14 @@ VALUES ('Vegan'),
 
 
 --Post Table
-CREATE TABLE post(
-    id SERIAL Primary KEY,
+CREATE TABLE post (
+    id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     ingredients TEXT NOT NULL,
     instructions TEXT NOT NULL,
-    user_id INTEGER REFERENCES user(id) NOT NULL,
+    member_id INTEGER REFERENCES member(id) NOT NULL
 );
+
 
 --JOIN table for Post and Category
 CREATE TABLE post_category (
@@ -53,6 +55,6 @@ CREATE TABLE meal_plan(
     name VARCHAR(255) NOT NULL,
     category_id INT REFERENCES category(id) NOT NULL,
     contents TEXT NOT NULL,
-    user_id INTEGER REFERENCES user(id) NOT NULL
+    member_id INTEGER REFERENCES member(id) NOT NULL
 );
 
