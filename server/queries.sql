@@ -11,8 +11,7 @@ CREATE TABLE member (
 --Category Table
 CREATE TABLE category(
     id SERIAL Primary KEY,
-    name VARCHAR(255) NOT NULL,
-    time_of_day VARCHAR(255) NOT NULL
+    name VARCHAR(255) NOT NULL
 );
 
 --Category Table Values
