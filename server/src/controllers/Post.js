@@ -38,10 +38,10 @@ class PostController {
             typeof post.title === 'string' &&
             typeof post.ingredients === 'string' &&
             typeof post.instructions === 'string' &&
-            typeof id === number &&
-            (typeof post.user_id === number || post.user_id === null)
+            (typeof post.id === number || typeof post.id === null) &&            
+            (typeof post.member_id === number || post.member_id === null)
         ){
-            db.none("INSERT INTO post (title, ingredients, instructions, user_id) VALUES ($1, $2, $3, $4)", [post.title, post.ingredients, post.instructions, post.user_id])
+            db.none("INSERT INTO post (title, ingredients, instructions, member_id) VALUES ($1, $2, $3, $4)", [post.title, post.ingredients, post.instructions, post.member_id])
             .then(() => {
                 console.log("Post Added")
             })
@@ -61,10 +61,10 @@ class PostController {
             typeof post.title === 'string' &&
             typeof post.ingredients === 'string' &&
             typeof post.instructions === 'string' &&
-            typeof id === number &&
-            (typeof post.user_id === number || post.user_id === null)
+            typeof post.id === number &&
+            (typeof post.member_id === number || post.member_id === null)
         ){
-                db.none('UPDATE post SET title = $1, ingredients = $2, instructions = $3, user_id = $4 WHERE id = $5', [post.title, post.ingredients, post.instructions, post.user_id, id])
+                db.none('UPDATE post SET title = $1, ingredients = $2, instructions = $3, member_id = $4 WHERE id = $5', [post.title, post.ingredients, post.instructions, post.member_id, id])
                 .then(() => {
                     console.log("Post Updated")
                 })

@@ -3,6 +3,8 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import { PostController } from './src/controllers/Post.js';
 import { PostRoutes } from './src/routes/post.js'
+import { MemberController } from './src/controllers/Member.js'
+import { MemberRoutes } from './src/routes/member.js'
 
 dotenv.config()
 const port = process.env.PORT;
@@ -23,10 +25,32 @@ server.use(express.json())
 server.use(cors(corsOptions))
 
 const PostControllers = new PostController();
+const MemberControllers = new MemberController();
 
 server.get('/', (req,res) =>{
     res.status(200).send('<h1 style="text-align: center; margin-top: 50px;"> Whippin in the Kitchen API</h1>')
 })
+
+//server for members
+server.get(MemberRoutes.getAllMembers, (req, res) => {
+  MemberControllers.getAllMembers(req, res)
+});
+
+server.get(MemberRoutes.getMemberById, (req, res) => {
+  MemberControllers.getMembersById(req, res)
+});
+
+server.post(MemberRoutes.createMember, (req, res) => {
+  MemberControllers.createMember(req, res)
+});
+
+server.put(MemberRoutes.updateMemberById, (req, res) => {
+  MemberControllers.updateMemberById(req, res)
+});
+
+server.delete(MemberRoutes.deleteMemberById, (req, res) => {
+  MemberControllers.deleteMemberById(req, res)
+});
 
 //server for posts
 server.get(PostRoutes.getAllPosts, (req, res) => {

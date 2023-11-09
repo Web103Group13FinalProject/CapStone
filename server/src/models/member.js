@@ -1,4 +1,4 @@
-const User = {
+const member = {
     id: null | number, 
     username: '',
     password: '',
@@ -6,4 +6,4 @@ const User = {
     last_name: '',
 };
 
-export {User};
+export {member};
