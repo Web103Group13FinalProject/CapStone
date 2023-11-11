@@ -24,9 +24,9 @@ The inspiration for MealMaster stems from the desire to create a user-friendly p
 
 ## Tech Stack
 
-Frontend:
+Frontend: React
 
-Backend:
+Backend: Node.js, Express, PostgreSQL
 
 ## Features
 
@@ -34,7 +34,7 @@ Backend:
 
 Should start on backend first to setup database.
 
-![Backend server demo gif](./Brainstorming/milestone3_gif/milestone3.gif)
+![Backend server demo gif](./Brainstorming/milestone_assets/milestone3.gif)
 
 ### User Authentication
 
@@ -42,15 +42,27 @@ The app should allow people to login/sign up so their personal information is co
 
 [gif goes here]
 
-### Add recipes
+### Home Page ✅
 
-The app should allow users to add their own recipes, so they can refer back to them and share with others.
+The app should have a home page that displays the app's name and a brief description of the app.   
+
+![Home Page](./Brainstorming/milestone_assets/home_page.gif)
+
+### View recipe Cards ✅
+
+The app should allow users to view recipes, so they can cook using the recipes.
+
+![View Recipe Cards](./Brainstorming/milestone_assets/view_recipe_cards.gif)
+
+### View recipes' Details on Seperate Page
+
+The app should allow users to view recipes' details in depth after they have clicked view recipe.    
 
 [gif goes here]
 
-### View recipes
+### Add recipes
 
-The app should allow users to view recipes, so they can cook using the recipes.
+The app should allow users to add their own recipes, so they can refer back to them and share with others.
 
 [gif goes here]
 
