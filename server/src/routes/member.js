@@ -2,7 +2,7 @@ const MemberRoutes = {
     getAllMembers: '/member',
     getMemberById: '/member/:id',
     createMember: '/member/create',
-    updateMemberById: '/member/:id/update',
+    updateMemberById: '/member/update/:id',
     deleteMemberById: '/member/delete/:id',
 }
 

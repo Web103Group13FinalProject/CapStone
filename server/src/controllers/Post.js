@@ -77,7 +77,7 @@ class PostController {
         }
     }
 
-    deleteCupById(req, res){
+    deletePostById(req, res){
         const id = req.params.id
         db.none('DELETE FROM post WHERE id = $1 ', id)
         .then(() => {

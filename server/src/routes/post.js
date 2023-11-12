@@ -2,7 +2,7 @@ const PostRoutes = {
     getAllPosts: '/posts',
     getPostById: '/posts/:id',
     createPost: '/posts/create',
-    updatePostById: '/posts/:id/update',
+    updatePostById: '/posts/update/:id',
     deletePostById: '/posts/delete/:id',
 };
 

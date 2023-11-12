@@ -37,8 +37,14 @@ CREATE TABLE post (
     title VARCHAR(255) NOT NULL,
     ingredients TEXT NOT NULL,
     instructions TEXT NOT NULL,
-    member_id INTEGER REFERENCES member(id) NOT NULL
+    member_id INTEGER REFERENCES member(id) NOT NULL,
+    Image_url TEXT 
 );
+
+INSERT INTO post (title, ingredients, instructions, member_id, Image_url)
+VALUES
+    ('Recipe 1', 'Ingredient 1, Ingredient 2', 'Step 1, Step 2, Step 3', 1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDkP4Poib2FV0oJ7Rkm-C1a6p4toPaMRwF7Q&usqp=CAU'),
+    ('Recipe 2', 'Ingredient A, Ingredient B', 'Step A, Step B, Step C', 2, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDkP4Poib2FV0oJ7Rkm-C1a6p4toPaMRwF7Q&usqp=CAU');
 
 
 --JOIN table for Post and Category
