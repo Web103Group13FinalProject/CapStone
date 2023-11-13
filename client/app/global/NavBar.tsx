@@ -8,8 +8,8 @@ export default function NavBar() {
                 <a href="/" id="Logo">MealMaster</a>
             </div>
             <div id="NavbarRight">
-                <a href="/member"><button>All Members</button></a>
                 <a href="/new"><button>Create Post</button></a>
+                <a href="/profile"><button>Become a Member</button></a>
             </div>
         </div>
     <style>
@@ -50,6 +50,9 @@ export default function NavBar() {
             text-decoration: none;
             align-items: center;
         }
+        #Logo:hover {
+            opacity: 0.5;
+        }
         #NavbarRight {
             display: flex;
             position: relative;
@@ -72,6 +75,11 @@ export default function NavBar() {
             border-radius: 5px;
             cursor: pointer;
             align-items: center;
+        }
+
+        #NavbarRight button:hover {
+            background-color: #222222;
+            opacity: 0.5;
         }
         
         `}

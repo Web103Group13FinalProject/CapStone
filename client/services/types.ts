@@ -1,18 +1,15 @@
 export interface Post {
-    id: null | number,
+    id?: number,
     title: string,
     ingredients: string,
     instructions: string,
-    user_id: null | number,
-    Image_url: string,
+    member_id?: number,
+    image: string,
 }
 
 export interface Member {
-    id: null | number, 
+    id?: number, 
     username: string,
-    password: string,
-    first_name: string,
-    last_name: string,
+    password: number,
+    name: string
 }
-
-{}

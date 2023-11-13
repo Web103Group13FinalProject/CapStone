@@ -19,7 +19,7 @@ export default async function Page() {
     <html>
       <body>
         <NavBar/>
-        <Home post={posts}/>
+        <Home posts={posts}/>
       </body>
   </html>
   )

@@ -1,19 +1,24 @@
-import '../globals.css'
- 
-export default function Home(post: any) {
+import React from 'react';
+import { Post } from '../../services/types'
+
+interface HomeProps {
+    posts: Post[];
+}
+const Home: React.FC<HomeProps> = ({ posts }) => {
     return (
         <div id="Home">
             <div id="HomeContainer">
                 <div id="PostCardContainer">
-                    {post.post.map((post:any) => (
+                    {posts.map((post: Post) => (
                         <div id="PostCard" key={post.id}>
                             <div id="PostImageContainer">
-                                <img id="PostImage" src={post.Image_url}/>
+                                <img id="PostImage" src={post.image}/>
                             </div>
                             <div id="PostInformationContainer">
                                 <p id='PostTitle'>Title: {post.title}</p>
                                 <p id='PostIngredients'>Ingredients: {post.ingredients}</p>
                                 <p id='PostInstructions'>Instructions: {post.instructions}</p>
+                                <a href={`/member/${post.member_id}`}>See Member</a>
                             </div>
                         </div>
                     ))}
@@ -92,3 +97,5 @@ export default function Home(post: any) {
         </div>
     )
 }
+
+export default Home;

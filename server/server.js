@@ -5,10 +5,10 @@ import { PostController } from './src/controllers/Post.js';
 import { PostRoutes } from './src/routes/post.js'
 import { MemberController } from './src/controllers/Member.js'
 import { MemberRoutes } from './src/routes/member.js'
-import {CategoryController} from './src/controllers/Category.js'
-import {CategoryRoutes} from './src/routes/category.js'
-import{ MealPlanController} from './src/controllers/MealPlan.js'
-import {MealPlanRoutes} from './src/routes/mealplan.js'
+import { CategoryController } from './src/controllers/Category.js'
+import { CategoryRoutes } from './src/routes/category.js'
+import { PasswordController } from './src/controllers/Password.js'
+import { PasswordRoutes } from './src/routes/password.js'
 
 dotenv.config()
 const port = process.env.PORT;
@@ -31,7 +31,7 @@ server.use(cors(corsOptions))
 const PostControllers = new PostController();
 const MemberControllers = new MemberController();
 const CategoryControllers = new CategoryController();
-const MealPlanControllers = new MealPlanController();
+const PasswordControllers = new PasswordController();
 
 server.get('/', (req,res) =>{
     res.status(200).send('<h1 style="text-align: center; margin-top: 50px;"> Whippin in the Kitchen API</h1>')
@@ -72,6 +72,10 @@ server.get(PostRoutes.getPostById, (req, res) => {
     PostControllers.getPostById(req, res)
 });
 
+server.get(PostRoutes.getPostsFromMember, (req, res) => {
+  PostControllers.getPostsFromMember(req, res)
+});
+
 server.post(PostRoutes.createPost, (req, res) => {
     const data = req.body
     PostControllers.createPost(req, res, data)
@@ -93,20 +97,24 @@ server.get(CategoryRoutes.getAllCategories, (req, res) => {
   CategoryControllers.getAllCategories(req,res)
 })
 
-//server for meal plans
-server.get(MealPlanRoutes.getAllMealPlans, (req, res) => {
-  MealPlanControllers.getAllMealPlans(req,res)
+//server for passwords
+server.get(PasswordRoutes.checkPassword, (req, res) => {
+  PasswordControllers.checkPassword(req,res)
 })
 
-server.post(MealPlanRoutes.createMealPlan, (req, res,) => {
-  const data = req.body
-  MealPlanControllers.createMealPlan(req,res,data)
+server.post(PasswordRoutes.createPassword, (req, res,) => {
+  PasswordControllers.createPassword(req,res)
 })
 
-server.delete(MealPlanRoutes.deleteMealPlanById, (req, res) => {
-  const id = req.params.id
-  MealPlanControllers.deleteMealPlanById(req, res, id)
+server.put(PasswordRoutes.updatePassword, (req, res) => {
+  PasswordControllers.updatePassword(req, res)
 })
+
+server.delete(PasswordRoutes.deletePassword, (req, res) => {
+  PasswordControllers.deletePassword(req, res)
+})
+
+
 
 server.get("*", (req, res) => {
   res.status(404).json("Page not found");

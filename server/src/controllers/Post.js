@@ -1,11 +1,4 @@
-import pgp from 'pg-promise';
-import dotenv from 'dotenv';
-dotenv.config();
-
-const connection = {
-    connectionString: process.env.POSTGRES_URL + "?sslmode=require",
-  };
-const db = pgp()(connection);
+import { db } from '../db.js'
 
 class PostController {
 
@@ -29,6 +22,18 @@ class PostController {
         catch(error){
             console.log(error)
             return res.status(500).json({error: "error occured when fetching for post by id"})
+        }
+    }
+
+    async getPostsFromMember(req, res) {
+        const id = req.params.id
+        try {
+            const post = await db.manyOrNone('SELECT * FROM post WHERE member_id = $1', id)
+            return res.status(200).json(post)
+        }
+        catch(error){
+            console.log(error)
+            return res.status(500).json({error: "error occured when fetching for post by member id"})
         }
     }
 
