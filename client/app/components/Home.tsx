@@ -1,10 +1,14 @@
 import React from 'react';
-import { Post } from '../../services/types'
+import { Post } from '../../services/types';
 
 interface HomeProps {
     posts: Post[];
 }
+
 const Home: React.FC<HomeProps> = ({ posts }) => {
+
+
+
     return (
         <div id="Home">
             <div id="HomeContainer">
@@ -12,7 +16,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
                     {posts.map((post: Post) => (
                         <div id="PostCard" key={post.id}>
                             <div id="PostImageContainer">
-                                <img id="PostImage" src={post.image}/>
+                                <img id="PostImage" src={post.image} />
                             </div>
                             <div id="PostInformationContainer">
                                 <p id='PostTitle'>Title: {post.title}</p>
@@ -22,47 +26,54 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
                             </div>
                         </div>
                     ))}
+                </div>
             <style>
                 {`
                     #Home {
                         display: flex;
                         position: relative;
-                        width: 99%;
-                        height: 180vh;
-                    }
-                    #HomeContainer {
-                        display: flex;
+                        width: 100vw;
+                        height: 100%;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+                    }
+                    #HomeContainer {
+                        display: flex;
+                        position: relative;
                         width: 100%;
                         height: 100%;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
                     }
                     #PostCardContainer {
                         display: flex;
+                        position: relative;
                         flex-direction: column;
                         justify-content: flex-start;
                         align-items: center;
                         width: 100%;
                         height: 100%;
-                        overflow-y: scroll;
                     }
                     #PostCard {
                         display: flex;
+                        position: relative;
+                        width: 90%;
+                        height: 200px;
                         flex-direction: row;
                         justify-content: space-around;
                         align-items: center;
-                        width: 1000px;
-                        height: 400px;
                         margin: 10px;
                         border: 1px solid white;
                     }
                     #PostImageContainer {
                         display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        position: relative;
                         width: 40%;
                         height: 80%;
+                        justify-content: center;
+                        align-items: center;
                     }
                     #PostImage {
                         width: 100%;
@@ -71,9 +82,9 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
                     #PostInformationContainer {
                         display: flex;
                         position: relative;
-                        flex-direction: column;
                         width: 50%;
                         height: 60%;
+                        flex-direction: column;
                         justify-content: space-around;
                         align-items: center;
                     }
@@ -92,10 +103,9 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
                     }    
                 `}
             </style>
-                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Home;

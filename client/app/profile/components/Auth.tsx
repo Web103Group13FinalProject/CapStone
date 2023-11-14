@@ -1,7 +1,7 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 import CheckPassword from '../../../services/GET/CheckPassword';
-import NavBar from '../../global/NavBar';
+import Navbar from '../../global/Navbar';
 import Login from './Login';
 import Profile from './Profile';
 import { Member } from '../../../services/types';
@@ -57,7 +57,7 @@ export default function Auth() {
         
     return (
       <div>
-          <NavBar/> 
+          <Navbar /> 
           {loggedIn ? <Profile user={userInfo} /> : <Login updateLoginState={(email: string, password: string) => checkValidity(email, password)} /> }
       </div>
     )

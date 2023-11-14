@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import React from 'react';
-import "./globals.css"
-import NavBar from '../global/NavBar';
-
+import Navbar from '../global/Navbar';
 
 export const metadata: Metadata = {
   title: 'MealMaster',
@@ -14,7 +12,7 @@ export default async function Page() {
   return (
     <html>
       <body>
-        <NavBar/>
+        <Navbar />
       </body>
   </html>
   )

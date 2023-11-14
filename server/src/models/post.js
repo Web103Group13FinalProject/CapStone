@@ -3,7 +3,7 @@ const Post = {
     title: '',
     ingredients: '',
     instructions: '',
-    user_id: null | number,
+    user_id: null | number
 };
 
-export {Post};
+export { Post };

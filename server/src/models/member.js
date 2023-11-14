@@ -1,9 +1,9 @@
-const member = {
-    id: null | number, 
-    username: '',
-    password: '',
-    first_name: '',
-    last_name: '',
+const Member = {
+  id: null | number,
+  username: "",
+  password: "",
+  name: "",
+  category_id: null | number,
 };
 
-export {member};
+export { Member };

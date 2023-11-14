@@ -1,6 +1,6 @@
 const Category = {
-    id: null | number,
-    name: '',
-  };
+  id: null | number,
+  name: '',
+};
   
-export {Category};
+export { Category };

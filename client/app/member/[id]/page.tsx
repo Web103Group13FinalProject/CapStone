@@ -1,10 +1,9 @@
 import { Metadata } from 'next';
 import React from 'react';
-import "./globals.css"
-import NavBar from '../../global/NavBar';
+import Navbar from '../../global/Navbar';
 import GetMemberById from '../../../services/GET/GetMemberById'
 import GetPostsFromMember from '../../../services/GET/GetPostsFromMember'
-import MemberById from './components/memberById';
+import MemberProfile from './components/MemberProfile';
 
 
 export const metadata: Metadata = {
@@ -20,8 +19,8 @@ export default async function Page({ params }: { params: { id: string } }) {
   return (
     <html>
       <body>
-        <NavBar/>
-        <MemberById member={member} posts={posts} />
+        <Navbar />
+        <MemberProfile member={member} posts={posts} />
       </body>
   </html>
   )

@@ -3,6 +3,6 @@ const PasswordRoutes = {
     createPassword: '/password/new',
     updatePassword: '/password/update/:password/:id',
     deletePassword: '/password/delete/:password/:id',
-}
+};
 
-export { PasswordRoutes }
+export { PasswordRoutes };

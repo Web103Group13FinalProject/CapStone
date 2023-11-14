@@ -1,10 +1,8 @@
 import { Metadata } from 'next';
 import React from 'react';
-import "./globals.css"
-import NavBar from './global/NavBar';
+import Navbar from './global/Navbar';
 import GetAllPosts from '../services/GET/GetAllPosts'
 import Home from './components/Home';
-
 
 export const metadata: Metadata = {
   title: 'MealMaster',
@@ -18,7 +16,7 @@ export default async function Page() {
   return (
     <html>
       <body>
-        <NavBar/>
+        <Navbar />
         <Home posts={posts}/>
       </body>
   </html>
