@@ -4,8 +4,7 @@ export class PasswordController {
 
     async checkPassword(req, res) {
         try {
-            const password = req.params.password;
-            const check = await db.one('SELECT * FROM password WHERE password = $1', [password]);
+            const check = await db.one('SELECT * FROM password WHERE password = $1', [req.params.password]);
             return res.json(check);
         } catch (error) {
             console.log(error);

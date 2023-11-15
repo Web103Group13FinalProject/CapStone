@@ -1,26 +1,38 @@
 import React, { useState } from 'react';
-// import updateMember from '../../../services/PUT/updateMember';
-// import deleteMember from '../../../services/DELETE/deleteMember';
-import { Member } from '../../../services/types';
+import UpdateMember from '../../../services/UPDATE/UpdateMemberById';
+import DeleteMember from '../../../services/DELETE/DeleteMemberById';
+import { Member, Category } from '../../../services/types';
 
 interface ProfileProps {
     user: Member;
+    categories: Category[];
 }
 
 const Profile: React.FC<ProfileProps> = ({ user }) => {
 
     const [showWarning, setShowWarning] = useState(false);
     const [name, setName] = useState(user.name);
+    const [username, setUsername] = useState(user.username);
     const [password, setPassword] = useState(user.password);
+    const [category, setCategory] = useState(user.category_id);
     const [showEditModal, setShowEditModal] = useState(false);
+    const [showCategoryModal, setShowCategoryModal] = useState(false);
     const userID = user.id ? user.id : 0;
 
     const updateName = (e: any) => {
         setName(e.target.value);
     };
 
+    const updateUsername = (e: any) => {
+        setUsername(e.target.value);
+    };
+
     const updatePassword = (e: any) => {
         setPassword(e.target.value);
+    };
+
+    const updateCategory = (index: number) => {
+        setCategory(index);
     };
 
     const openEditModal = () => {
@@ -31,11 +43,19 @@ const Profile: React.FC<ProfileProps> = ({ user }) => {
         setShowEditModal(false);
     };
 
-    const validateUpdatedInfo = (id: number, name: string, password: number) => {
-        if (name.length > 0 && password > 0) {
-            const updatedMember = { id, name, password};
+    const openCategoryModal = () => {
+        setShowCategoryModal(true);
+    };
+
+    const closeCategoryModal = () => {
+        setShowCategoryModal(false);
+    };
+
+    const validateUpdatedInfo = async (id: number, name: string, username: string, password: number, category_id: number | undefined) => {
+        if (name.length > 0 && username.length > 0 && password > 0) {
+            const updatedMember: Member = { name: name, username: username, password: password, category_id: category_id };
             localStorage.setItem('auth', JSON.stringify(updatedMember));
-            // updateMember(updatedMember, String(id), password);
+            UpdateMember(updatedMember, String(id));
             setTimeout(() => {
                 window.location.reload();
             }, 10);
@@ -56,7 +76,7 @@ const Profile: React.FC<ProfileProps> = ({ user }) => {
         const tokenString = localStorage.getItem('auth');
         const token = tokenString ? JSON.parse(tokenString) : [];
         if (token) {
-            // deleteMember(String(user.id), token.password);
+            DeleteMember(String(user.id));
             localStorage.removeItem('auth');
             setTimeout(() => {
                 window.location.href = '/';
@@ -77,13 +97,16 @@ const Profile: React.FC<ProfileProps> = ({ user }) => {
                         </div>
                         <div id="ProfileEditInfoInputContainer">
                             <input id="ProfileEditInfoInput" type="text" placeholder="Update Name" value={name} onChange={updateName} />
+                            <input id="ProfileEditInfoInput" type="text" placeholder="Update Username" value={username} onChange={updateUsername} />
                             <input id="ProfileEditInfoInput" type="text" placeholder="Update Password" value={password} onChange={updatePassword} />
+                            <div id="OpenCategoryModal" onClick={openCategoryModal}>{category}</div>
+                            {/* create category choice drop down */}
                         </div>
                         <div id="ProfileEditInfoErrorContainer">
                             {showWarning && <p id="ProfileEditInfoError">Invalid Input</p>}
                         </div>
                         <div id="ProfileEditInfoUpdateContainer">
-                            <div id="ProfileEditInfoUpdate" onClick={() => validateUpdatedInfo(userID, name, password)}>Update Info</div>
+                            <div id="ProfileEditInfoUpdate" onClick={() => validateUpdatedInfo(userID, name, username, password, category)}>Update Info</div>
                         </div>
                     </div>
                 ) : (

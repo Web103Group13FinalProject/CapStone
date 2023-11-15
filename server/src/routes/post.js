@@ -4,7 +4,7 @@ const PostRoutes = {
     getPostsFromMember: '/posts/member/:id',
     createPost: '/posts/create',
     updatePostById: '/posts/update/:id',
-    deletePostById: '/posts/delete/:id',
+    deletePostById: '/posts/delete/:id'
 };
 
 export { PostRoutes };

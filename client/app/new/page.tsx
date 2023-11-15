@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '../global/Navbar';
 
 export const metadata: Metadata = {
-  title: 'MealMaster',
+  title: 'MealMaster | New Post',
   description: 'Post your meals here!',
 };
 

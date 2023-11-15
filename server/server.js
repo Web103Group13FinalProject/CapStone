@@ -44,24 +44,25 @@ server.get(MemberRoutes.getAllMembers, (req, res) => {
 });
 
 server.get(MemberRoutes.getMemberById, (req, res) => {
-  const id = req.params.id;
-  MemberControllers.getMembersById(req, res, id);
+  MemberControllers.getMemberById(req, res);
+});
+
+server.get(MemberRoutes.getMemberByUsername, (req, res) => {
+  MemberControllers.getMemberByUsername(req, res);
 });
 
 server.post(MemberRoutes.createMember, (req, res) => {
-  const data = req.body;
-  MemberControllers.createMember(req, res, data);
+  const member = req.body;
+  MemberControllers.createMember(req, res, member);
 });
 
 server.put(MemberRoutes.updateMemberById, (req, res) => {
-  const data = req.body;
-  const id = req.params.id;
-  MemberControllers.updateMemberById(req, res, data, id);
+  const member = req.body;
+  MemberControllers.updateMemberById(req, res, member);
 });
 
 server.delete(MemberRoutes.deleteMemberById, (req, res) => {
-  const id = req.params.id;
-  MemberControllers.deleteMemberById(req, res, id);
+  MemberControllers.deleteMemberById(req, res);
 });
 
 
@@ -80,19 +81,17 @@ server.get(PostRoutes.getPostsFromMember, (req, res) => {
 });
 
 server.post(PostRoutes.createPost, (req, res) => {
-    const data = req.body;
-    PostControllers.createPost(req, res, data);
+    const post = req.body;
+    PostControllers.createPost(req, res, post);
 });
 
 server.put(PostRoutes.updatePostById, (req, res) => {
-    const data = req.body;
-    const id = req.params.id;
-    PostControllers.updatePostById(req, res, data, id);
+    const post = req.body;
+    PostControllers.updatePostById(req, res, post);
 });
 
 server.delete(PostRoutes.deletePostById, (req, res) => {
-    const id = req.params.id;
-    PostControllers.deletePostById(req, res, id);
+    PostControllers.deletePostById(req, res);
 });
 
 

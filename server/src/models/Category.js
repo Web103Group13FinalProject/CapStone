@@ -1,6 +1,6 @@
 const Category = {
   id: null | number,
-  name: '',
+  name: ''
 };
   
 export { Category };

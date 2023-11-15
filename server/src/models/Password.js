@@ -1,6 +1,6 @@
 const Password = {
   id: null | number,
-  password: '',
+  password: ''
 };
   
 export { Password };

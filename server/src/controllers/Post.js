@@ -14,8 +14,7 @@ export class PostController {
 
     async getPostById(req, res) {
         try {
-            const id = req.params.id;
-            const post = await db.one('SELECT * FROM post WHERE id = $1', id);
+            const post = await db.one('SELECT * FROM post WHERE id = $1', req.params.id);
             return res.status(200).json(post);
         } catch(error) {
             console.log(error);
@@ -25,8 +24,7 @@ export class PostController {
 
     async getPostsFromMember(req, res) {
         try {
-            const id = req.params.id;
-            const post = await db.manyOrNone('SELECT * FROM post WHERE member_id = $1', id);
+            const post = await db.manyOrNone('SELECT * FROM post WHERE member_id = $1', req.params.member);
             return res.status(200).json(post);
         } catch(error) {
             console.log(error);

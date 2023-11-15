@@ -1,5 +1,5 @@
 const CategoryRoutes = {
-    getAllCategories: '/category',
+    getAllCategories: '/category'
 };
 
 export { CategoryRoutes };

@@ -1,20 +1,29 @@
 import React, { useState } from 'react';
+import GetMemberByUsername from '../../../services/GET/GetMemberByUsername';
 import CheckPassword from '../../../services/GET/CheckPassword';
 
 interface LoginProps {
-    updateLoginState: (email: string, password: string) => void;
+    updateLoginState: (username: string, password: string) => void;
 }
 
 const Login: React.FC<LoginProps> = ({ updateLoginState }) => {
 
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [showWarning, setShowWarning] = useState(false);
 
     const handleFormSubmit = async () => {
-        const res = await CheckPassword(password);
-        if (res) {
-            updateLoginState(res.email, res.password);
+        const member = await GetMemberByUsername(username);
+        if (member) {
+            const checkedPassword = await CheckPassword(password);
+            if (checkedPassword && member.password_id === checkedPassword.id) {
+                updateLoginState(member.username, checkedPassword.password);
+            } else {
+                setShowWarning(true);
+                setTimeout(() => {
+                    setShowWarning(false);
+                }, 3000);
+            }
         } else {
             setShowWarning(true);
             setTimeout(() => {
@@ -23,8 +32,8 @@ const Login: React.FC<LoginProps> = ({ updateLoginState }) => {
         }
     }
 
-    const updateEmail = (e: any) => {
-        setEmail(e.target.value);
+    const updateUsername = (e: any) => {
+        setUsername(e.target.value);
     }
 
     const updatePassword = (e: any) => {
@@ -38,7 +47,7 @@ const Login: React.FC<LoginProps> = ({ updateLoginState }) => {
                     <p id="HeaderLogin">User Login</p>
                 </div>
                 <div id="LoginInputContainer">
-                    <input id="LoginInput" type="text" placeholder="Email" onChange={updateEmail} />
+                    <input id="LoginInput" type="text" placeholder="Username" onChange={updateUsername} />
                     <input id="LoginInput" type="password" placeholder="Password" onChange={updatePassword} />
                 </div>
                 <div id="LoginButtonContainer">

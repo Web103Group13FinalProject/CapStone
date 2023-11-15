@@ -3,7 +3,7 @@ const Member = {
   username: "",
   password: "",
   name: "",
-  category_id: null | number,
+  category_id: null | number
 };
 
 export { Member };

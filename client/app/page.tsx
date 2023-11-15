@@ -5,7 +5,7 @@ import GetAllPosts from '../services/GET/GetAllPosts'
 import Home from './components/Home';
 
 export const metadata: Metadata = {
-  title: 'MealMaster',
+  title: 'MealMaster | Home',
   description: 'Post your meals here!',
 };
 

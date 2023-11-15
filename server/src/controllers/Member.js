@@ -12,15 +12,25 @@ export class MemberController {
         }
     };
 
-    async getMembersById(req, res) {
+    async getMemberById(req, res) {
         try {
-            const id = req.params.id;
-            const member = await db.one(`SELECT * FROM member WHERE id = ${id}`);
+            const member = await db.one('SELECT * FROM member WHERE id = $1', req.params.id);
             return res.json(member);
         }
         catch(error) {
             console.log(error);
             return res.status(500).json({error: "Error Occured when fetching member by id"});
+        }
+    };
+
+    async getMemberByUsername(req, res) {
+        try {
+            const member = await db.one('SELECT * FROM member WHERE username = $1', req.params.username);
+            return res.json(member);
+        }
+        catch(error) {
+            console.log(error);
+            return res.status(500).json({error: "Error Occured when fetching member by username"});
         }
     };
 
@@ -51,7 +61,6 @@ export class MemberController {
 
     updateMemberById(req, res, member) {
         try {
-            const id = req.params.id;
             if (
                 (typeof member.id === number || typeof member.id === null) &&
                 typeof member.username === 'string' &&
@@ -59,7 +68,7 @@ export class MemberController {
                 typeof member.first_name === 'string' &&
                 typeof member.last_name === 'string'
             ) {
-                db.none('UPDATE member SET username = $1,  password = $2, first_name = $3, last_name = $4 WHERE id = $5', [member.username, member.password, member.first_name, member.last_name, id])
+                db.none('UPDATE member SET username = $1,  password = $2, first_name = $3, last_name = $4 WHERE id = $5', [member.username, member.password, member.first_name, member.last_name, req.params.id])
                 .then(() => {
                     console.log("Member Info Updated");
                 })
@@ -77,8 +86,7 @@ export class MemberController {
 
     deleteMemberById(req, res) {
         try {
-            const id = req.params.id;
-            db.none('DELETE FROM member WHERE id = $1 ', id)
+            db.none('DELETE FROM member WHERE id = $1 ', req.params.id)
             .then(() => {
                 res.status(200).json({message: "Member deleted"});
             })

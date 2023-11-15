@@ -7,7 +7,7 @@ import MemberProfile from './components/MemberProfile';
 
 
 export const metadata: Metadata = {
-  title: 'MealMaster',
+  title: 'MealMaster | Profile',
   description: 'Post your meals here!',
 };
 
