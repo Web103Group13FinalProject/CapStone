@@ -1,102 +1,61 @@
-# MealMaster
+# WEB103 Project 4 - *CupCentral*
 
-CodePath WEB103 Final Project
+Submitted by: **Michael Girma**
 
-Designed and developed by: Michael, Sushant
+About this web app: **A full-stack e-commerce website that is built with postgress, express, react and node. Implements CRUD requests**
 
-🔗 Link to deployed app:
+Time spent: **25** hours
 
-## About
+## Required Features
 
-### Description and Purpose
+The following **required** functionality is completed:
 
-MealMaster is a culinary companion platform designed to help users explore, organize, and master their cooking journey. Users can create an account, log in, and utilize various features related to meal planning and recipe sharing. With MealMaster, users can:
+<!-- Make sure to check off completed functionality below -->
+- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomCar` table**
+  - [x] **NOTE: Your GIF must include a view of your Railway database that shows the contents of the table used by your app**
+- [x] **The web app uses React to display data from the API**
+- [x] **Users can view a list of options they can select for different aspects of a `CustomCar`**
+- [x] **On selecting each option, the displayed visual icon for the `CustomCar` updates to match the option the user chose**
+- [x] **The user can submit their choices to save the car to the list of created `CustomCar`**
+- [x] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database**
+- [x] **The app displays the total price of all features**
+- [x] **Users can view a list of all submitted `CustomCar`**
+- [x] **Users can edit or delete a submitted `CustomCar` from the list view of submitted `CustomCar`**
+- [x] **Users can update or delete `CustomCar` that have been created from the detail page**
 
-Discover and Share Recipes: Users can explore a diverse collection of recipes from various cuisines and share their own culinary creations.
-Plan Meals: Create personalized meal plans for the week, making it easy to organize and prepare delicious dishes.
-Collaborate with Friends and Family: Share meal plans and recipes with friends and family, making cooking a collaborative and enjoyable experience.
-Rate and Review Recipes: Users can provide ratings and reviews for recipes they've tried, helping others make informed choices.
-Find Culinary Inspiration: Whether you're a seasoned chef or a novice in the kitchen, MealMaster provides a space to find inspiration and enhance your cooking skills.
+The following **optional** features are implemented:
 
-### Inspiration
+- [ ] Selecting particular options prevents incompatible options from being selected even before form submission
 
-The inspiration for MealMaster stems from the desire to create a user-friendly platform that combines the best aspects of culinary social media, meal planning, and recipe sharing.
+The following **additional** features are implemented:
 
-## Tech Stack
+- [ ] List anything else that you added to improve the site's functionality!
 
-Frontend: React
+## Video Walkthrough
 
-Backend: Node.js, Express, PostgreSQL
+Here's a walkthrough of implemented required features:
 
-## Features
-
-### Get started on backend ✅
-
-Should start on backend first to setup database.
-
-![Backend server demo gif](./Brainstorming/milestone_assets/milestone3.gif)
-
-### User Authentication
-
-The app should allow people to login/sign up so their personal information is connected to their account.
-
-[gif goes here]
-
-### Home Page ✅
-
-The app should have a home page that displays the app's name and a brief description of the app.   
-
-![Home Page](./Brainstorming/milestone_assets/home_page.gif)
-
-### View recipe Cards ✅
-
-The app should allow users to view recipes, so they can cook using the recipes.
-
-![View Recipe Cards](./Brainstorming/milestone_assets/view_recipe_cards.gif)
-
-### View recipes' Details on Seperate Page
-
-The app should allow users to view recipes' details in depth after they have clicked view recipe.    
-
-[gif goes here]
-
-### Add recipes
-
-The app should allow users to add their own recipes, so they can refer back to them and share with others.
-
-[gif goes here]
-
-### Edit recipes
-
-The app should allow users to edit recipes, so they can make corrections or improvements.
-
-[gif goes here]
-
-### Delete recipes
-
-The app should allow users to delete recipes, so they can remove recipes they no longer want.
-
-[gif goes here]
-
-### Create meal plan
-
-The app should allow users to create a meal plan by selecting recipes from their saved recipes and organize them for the week.
-
-[gif goes here]
+https://github.com/michaelgirma/CupCentral/assets/130878160/8a69b135-5e96-4e5f-a703-6941f599d255
 
 
-### Filter recipes
 
-The app should allow users to filter for recipes by category so that they can easily find what they're looking for.
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  GIF tool here
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
-[gif goes here]
+## Notes
 
-### Rate and review recipes
+Describe any challenges encountered while building the app or any additional context you'd like to add.
 
-The app should allow users to rate and review recipes, so that other users can see their feedback and make informed decisions.
+## License
 
-[gif goes here]
+Copyright [2023] [Michael Girma]
 
-## Installation Instructions
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-[instructions go here]
+> http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

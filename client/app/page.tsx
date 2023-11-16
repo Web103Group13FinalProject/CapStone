@@ -1,24 +1,24 @@
-import { Metadata } from 'next';
 import React from 'react';
-import Navbar from './global/Navbar';
-import GetAllPosts from '../services/GET/GetAllPosts'
+import { Metadata } from 'next';
+import Header from './global/Header';
 import Home from './components/Home';
+import GetAllCups from '../services/GET/GetAllCups';
 
 export const metadata: Metadata = {
-  title: 'MealMaster | Home',
-  description: 'Post your meals here!',
+  title: 'CupCentral',
+  description: 'Buy Your Customized Cups Here!',
 };
 
 export default async function Page() {
 
-  const posts = await GetAllPosts();
-
+  const cups = await GetAllCups();
+  
   return (
     <html>
       <body>
-        <Navbar />
-        <Home posts={posts}/>
+        <Header />
+        <Home cups={cups} />
       </body>
-  </html>
+    </html>
   )
 }

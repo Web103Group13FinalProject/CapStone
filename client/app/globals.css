@@ -4,20 +4,17 @@ html, body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  background-color: #080707;
+  background-color: black;
   font-family: InterMedium;
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
-  background-color: transparent;
+  width: 0.2em;
+  background-color: black;
 }
 
 body::-webkit-scrollbar-thumb {
-  width: 10px;
-  background-color: rgb(195, 195, 195);
-  border-radius: 25px;
+  background-color: #F5F5F5;
 }
 
 @font-face {
@@ -38,4 +35,9 @@ body::-webkit-scrollbar-thumb {
 @font-face {
   font-family: 'InterBold';
   src: url('/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('/Consolas.ttf') format('truetype');
 }

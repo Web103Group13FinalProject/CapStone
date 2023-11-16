@@ -1,27 +1,14 @@
-export interface Category {
-    id?: number;
-    name: string;
-};
-
-export interface Member {
-    id?: number;
-    username: string;
-    password: number;
-    name: string;
-    category_id?: number;
-};
-
-export interface Post {
-    id?: number;
+export interface Cup { 
+    id?: string;
     title: string;
-    ingredients: string;
-    instructions: string;
+    size_id: number;
+    color_id: number;
+    lid: number[];
     image: string;
-    member_id?: number;
-    category_id?: number;
-};
+}
 
-export interface Password {
-    id?: number;
-    password: string;
-};
+export interface CupImage {
+    lid: string;
+    cup: string;
+    img: string;
+}

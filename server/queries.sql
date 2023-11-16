@@ -1,46 +1,56 @@
---Category Table
-CREATE TABLE category(
+CREATE TABLE size (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
+    title TEXT NOT NULL,
+    size TEXT NOT NULL,
+    image TEXT NOT NULL
 );
 
---Category Table Values
-INSERT INTO category (name)
-VALUES ('Vegan'),
-       ('Vegetarian'),
-       ('Pescatarian'),
-       ('Keto'),
-       ('Paleo'),
-       ('Gluten-Free'),
-       ('Dairy-Free'),
-       ('Dessert'),
-       ('Low-Carb'),
-       ('Mediterranean'),
-       ('Raw-Food'),
-       ('Other');
+INSERT INTO size (title, size, image)
+VALUES ('8oz', 'Small', 'https://i.pinimg.com/originals/14/6c/67/146c673da71faf72e037a4af7ac79b84.png'),
+       ('12oz', 'Medium', 'https://i.pinimg.com/originals/e4/df/89/e4df893d7a603ecbb05a1d11a5d59ae8.png'),
+       ('16oz', 'Large', 'https://i.pinimg.com/originals/a9/e3/0e/a9e30e3fed8449a7874ea498ec7d0b93.png');
 
---User Table
-CREATE TABLE member (
+CREATE TABLE color (
     id SERIAL PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    password VARCHAR(255) REFERENCES password(id),
-    name VARCHAR(255) NOT NULL,
-    category_id INTEGER REFERENCES category(id) -- one to many
+    title TEXT NOT NULL,
+    color TEXT NOT NULL,
 );
 
---Post Table
-CREATE TABLE post (
+INSERT INTO color (title, color)
+VALUES ('Black','#000000'),
+       ('Green','#2F6F3E'),
+       ('Blue','#012169'),
+       ('Yellow','#E3E829'),
+       ('Red','#C70000');
+
+
+-- CREATE TABLE lid (
+--     id SERIAL PRIMARY KEY,
+--     size_id INT REFERENCES size(id),
+--     color_id INT REFERENCES color(id),
+--     image TEXT NOT NULL
+-- );
+
+-- CREATE TABLE cup (
+--     id SERIAL PRIMARY KEY,
+--     title TEXT NOT NULL,
+--     lid_id INT REFERENCES lid(id),
+--     color_id INT REFERENCES color(id),
+--     size_id INT REFERENCES size(id),
+--     image TEXT NOT NULL
+-- );
+
+CREATE TABLE cup (
     id SERIAL PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    ingredients TEXT NOT NULL,
-    instructions TEXT NOT NULL,
-    image TEXT NOT NULL,
-    member_id INTEGER REFERENCES member(id),    -- many to many
-    category_id INTEGER REFERENCES category(id) -- one to many, many to many
+    title TEXT NOT NULL,
+    lid TEXT[] NOT NULL,
+    color_id INT REFERENCES color(id),
+    size_id INT REFERENCES size(id),
+    image TEXT NOT NULL
 );
 
--- Password Table
-CREATE TABLE password (
-    id SERIAL PRIMARY KEY,
-    password VARCHAR(255) NOT NULL
-);
+UPDATE size SET image = 'https://cdn.iconscout.com/icon/free/png-512/free-s-character-alphabet-letter-32865.png?f=webp&w=256' WHERE id = 1;
+    
+UPDATE size SET image = 'https://cdn.iconscout.com/icon/free/png-512/free-m-character-alphabet-letter-32858.png?f=webp&w=256' WHERE id = 2;
+    
+UPDATE size SET image = 'https://cdn.iconscout.com/icon/free/png-512/free-l-character-alphabet-letter-32862.png?f=webp&w=256' WHERE id = 3;

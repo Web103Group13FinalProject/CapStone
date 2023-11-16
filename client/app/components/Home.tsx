@@ -1,111 +1,103 @@
+"use client";
 import React from 'react';
-import { Post } from '../../services/types';
+import "../globals.css";
+import { Cup } from '../../services/types';
 
 interface HomeProps {
-    posts: Post[];
+    cups: Cup[];
 }
 
-const Home: React.FC<HomeProps> = ({ posts }) => {
+const Home: React.FC<HomeProps> = ({ cups }) => {
 
-
-
-    return (
+    return ( 
         <div id="Home">
             <div id="HomeContainer">
-                <div id="PostCardContainer">
-                    {posts.map((post: Post) => (
-                        <div id="PostCard" key={post.id}>
-                            <div id="PostImageContainer">
-                                <img id="PostImage" src={post.image} />
+                <div id="CupCardsContainer">
+                    {cups.map((cup: Cup) => (
+                        <div id="CupCard" key={cup.id}>
+                            <div id="CupImageContainer">
+                                <img src={cup.image} alt="Cup Image" id="CupImage"/>
                             </div>
-                            <div id="PostInformationContainer">
-                                <p id='PostTitle'>Title: {post.title}</p>
-                                <p id='PostIngredients'>Ingredients: {post.ingredients}</p>
-                                <p id='PostInstructions'>Instructions: {post.instructions}</p>
-                                <a href={`/member/${post.member_id}`}>See Member</a>
+                            <div id="CupInfo">
+                                <p id="CupName">{cup.title}</p>
+                                <a id="LearnMore" href={`/${cup.id}`}>Learn More</a>
                             </div>
                         </div>
                     ))}
                 </div>
-            <style>
-                {`
-                    #Home {
-                        display: flex;
-                        position: relative;
-                        width: 100vw;
-                        height: 100%;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    #HomeContainer {
-                        display: flex;
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    #PostCardContainer {
-                        display: flex;
-                        position: relative;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: center;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    #PostCard {
-                        display: flex;
-                        position: relative;
-                        width: 90%;
-                        height: 200px;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        align-items: center;
-                        margin: 10px;
-                        border: 1px solid white;
-                    }
-                    #PostImageContainer {
-                        display: flex;
-                        position: relative;
-                        width: 40%;
-                        height: 80%;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    #PostImage {
-                        width: 100%;
-                        height: 100%;
-                    }
-                    #PostInformationContainer {
-                        display: flex;
-                        position: relative;
-                        width: 50%;
-                        height: 60%;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        align-items: center;
-                    }
-                    #PostTitle {
-                        font-size: 20px;
-                        font-weight: bold;
-                        color: white;
-                    }
-                    #PostIngredients {
-                        font-size: 15px;
-                        color: white;
-                    }
-                    #PostInstructions {
-                        font-size: 15px;
-                        color: white;
-                    }    
-                `}
-            </style>
             </div>
+        <style>
+            {`
+                #Home{
+                    display: flex;
+                    position: relative;
+                    width: 99%;
+                    height: 180vh;
+                }
+                #HomeContainer{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                }
+                #CupCardsContainer{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    overflow-y: scroll;
+                }
+                #CupCard{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 250px;
+                    height: 700px;
+                    margin: 10px;
+                    border: 1px solid white;
+                }
+                #CupImageContainer{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 80%;
+                }
+                #CupImage{
+                    width: 100%;
+                    height: 100%;
+                }
+                #CupInfo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 15%;
+                }
+                #CupName{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: white;
+                }
+                #CupPrice{
+                    font-size: 15px;
+                    color: white;
+                }
+                #LearnMore{
+                    font-size: 15px;
+                    color: white;
+                }
+               
+            `}
+        </style>
         </div>
-    );
+    )
 };
 
 export default Home;
