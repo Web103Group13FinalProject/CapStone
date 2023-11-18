@@ -89,7 +89,7 @@ export default function Header() {
         <div id="Header">
             <div id="HeaderContainer" className={scrolled ? 'scrolled' : ''}>
                 <div id="HeaderLogoContainer">
-                    <Link id="HeaderLogoLink" href='/'>MealMaster</Link>
+                    <Link id="HeaderLogoLink" href='/'>CupCentral</Link>
                 </div>
                 {showMobileView ? (
                     <div id="MobileMenuContainer">
