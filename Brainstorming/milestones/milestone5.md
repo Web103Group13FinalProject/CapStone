@@ -6,10 +6,10 @@ This document should be completed and submitted during **Unit 9** of this course
 
 This unit, be sure to complete all tasks listed below. To complete a task, place an `x` between the brackets.
 
-- [ ] Deploy your project on Railway
-  - [ ] In `readme.md`, add the link to your deployed project
+- [x] Deploy your project on Railway
+  - [x] In `readme.md`, add the link to your deployed project
 - [ ] Update the status of issues in your project board as you complete them
-- [ ] In `readme.md`, check off the features you have completed in this unit by adding a ✅ emoji in front of their title
+- [x] In `readme.md`, check off the features you have completed in this unit by adding a ✅ emoji in front of their title
   - [ ] Under each feature you have completed, **include a GIF** showing feature functionality
 - [ ] In this document, complete the **Reflection** section below
 - [ ] 🚩🚩🚩**Complete the Final Project Feature Checklist section below**, detailing each feature you completed in the project (ONLY include features you implemented, not features you planned)
@@ -20,28 +20,30 @@ This unit, be sure to complete all tasks listed below. To complete a task, place
 
 Complete the checklist below detailing each baseline, custom, and stretch feature you completed in your project. This checklist will help graders look for each feature in the GIF you submit.
 
+![Walkthrough](../milestone_assets/walkthrough.gif)
+
 ### Baseline Features
 
 👉🏾👉🏾👉🏾 Check off each completed feature below.
 
-- [ ] The project includes an Express backend app and a React frontend app
-- [ ] The project includes these backend-specific features:
-  - [ ] At least one of each of the following database relationship in Postgres
-    - [ ] one-to-many
-    - [ ] many-to-many with a join table
-  - [ ] A well-designed RESTful API
-    - [ ] The API can respond to at least one of each type of request: GET, POST, PATCH, and DELETE
-    - [ ] Routes follow proper naming conventions
-  - [ ] The ability to reset the database to its default state
-- [ ] The project includes these frontend-specific features:
-  - [ ] At least one redirection
-  - [ ] At least one interaction that the user can initiate and complete on the same page without navigating to a new page
-  - [ ] Dynamic frontend routes created with React Router
-  - [ ] Hierarchically designed React components
-    - [ ] Components broken down into categories, including Page and Component types
-    - [ ] Corresponding container components and presenter components as appropriate
-- [ ] The project includes dynamic routes for both frontend and backend apps
-- [ ] The project is deployed on Railway with all pages and features working
+- [x] The project includes an Express backend app and a React frontend app
+- [x] The project includes these backend-specific features:
+  - [x] At least one of each of the following database relationship in Postgres
+    - [x] one-to-many
+    - [x] many-to-many with a join table
+  - [x] A well-designed RESTful API
+    - [x] The API can respond to at least one of each type of request: GET, POST, PATCH, and DELETE
+    - [x] Routes follow proper naming conventions
+  - [x] The ability to reset the database to its default state
+- [x] The project includes these frontend-specific features:
+  - [x] At least one redirection
+  - [x] At least one interaction that the user can initiate and complete on the same page without navigating to a new page
+  - [x] Dynamic frontend routes created with React Router
+  - [x] Hierarchically designed React components
+    - [x] Components broken down into categories, including Page and Component types
+    - [x] Corresponding container components and presenter components as appropriate
+- [x] The project includes dynamic routes for both frontend and backend apps
+- [x] The project is deployed on Railway with all pages and features working
 
 ### Custom Features
 
