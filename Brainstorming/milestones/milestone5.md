@@ -10,17 +10,15 @@ This unit, be sure to complete all tasks listed below. To complete a task, place
   - [x] In `readme.md`, add the link to your deployed project
 - [ ] Update the status of issues in your project board as you complete them
 - [x] In `readme.md`, check off the features you have completed in this unit by adding a ✅ emoji in front of their title
-  - [ ] Under each feature you have completed, **include a GIF** showing feature functionality
-- [ ] In this document, complete the **Reflection** section below
-- [ ] 🚩🚩🚩**Complete the Final Project Feature Checklist section below**, detailing each feature you completed in the project (ONLY include features you implemented, not features you planned)
-- [ ] 🚩🚩🚩**Record a GIF showing a complete run-through of your app** that displays all the components included in the **Final Project Feature Checklist** below
-  - [ ] Include this GIF in the **Final Demo GIF** section below
+  - [x] Under each feature you have completed, **include a GIF** showing feature functionality
+- [x] In this document, complete the **Reflection** section below
+- [x] 🚩🚩🚩**Complete the Final Project Feature Checklist section below**, detailing each feature you completed in the project (ONLY include features you implemented, not features you planned)
+- [x] 🚩🚩🚩**Record a GIF showing a complete run-through of your app** that displays all the components included in the **Final Project Feature Checklist** below
+  - [x] Include this GIF in the **Final Demo GIF** section below
 
 ## Final Project Feature Checklist
 
 Complete the checklist below detailing each baseline, custom, and stretch feature you completed in your project. This checklist will help graders look for each feature in the GIF you submit.
-
-![Walkthrough](../milestone_assets/walkthrough.gif)
 
 ### Baseline Features
 
@@ -53,10 +51,10 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 - [ ] The project includes a one-to-one database relationship
 - [ ] The project includes a slide-out pane or modal as appropriate for your use case
 - [ ] The project includes a unique field within the join table
-- [ ] The project includes a custom non-RESTful route with corresponding controller actions
+- [x] The project includes a custom non-RESTful route with corresponding controller actions
 - [ ] The project allows filtering and/or sorting as appropriate for your use case
 - [ ] Data is automatically generated in response to a certain event or user action. Examples include generating a default inventory for a new user starting a game or creating a starter set of tasks for a user creating a new task app account
-- [ ] Data submitted via a POST or PATCH request is validated before the database is updated
+- [x] Data submitted via a POST or PATCH request is validated before the database is updated
 
 ### Stretch Features
 
@@ -64,7 +62,7 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 
 - [ ] A subset of pages require the user to log in before accessing the content
   - [ ] Users can log in and log out via GitHub OAuth with Passport.js
-- [ ] Restrict available user options dynamically, such as restricting available purchases based on a user's currency
+- [x] Restrict available user options dynamically, such as restricting available purchases based on a user's currency
 - [ ] Show a spinner while a page or page element is loading
 - [ ] Disable buttons and inputs during the form submission process
 - [ ] Disable buttons after they have been clicked
@@ -73,26 +71,26 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 
 ## Final Demo GIF
 
-🔗 [Here's a GIF walkthrough of the final project](👉🏾👉🏾👉🏾 your link here)
+🔗 ![Walkthrough](../milestone_assets/walkthrough.gif)
 
 ## Reflection
 
 ### 1. What went well during this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+We were able to figure out all the basic backend logic and implement it to the frotend.
 
 ### 2. What were some challenges your group faced in this unit?
 
-[👉🏾👉🏾👉🏾 your answer here]
+There were a few challenges getting the idea situated with the time limit we had and the time we could allocate to work on the project outside of school and other obligations.
 
 ### 3. What were some of the highlights or achievements that you are most proud of in this project?
 
-[👉🏾👉🏾👉🏾 your answer here]
+Getting the backend to sync well with the frotend, especially for the path operations was satisfying to see happen.
 
 ### 4. Reflecting on your web development journey so far, how have you grown since the beginning of the course?
 
-[👉🏾👉🏾👉🏾 your answer here]
+We have learned a lot regarding the backend and figured out many different practices that will be helpful when working on full stack applications in the future.
 
 ### 5. Looking ahead, what are your goals related to web development, and what steps do you plan to take to achieve them?
 
-[👉🏾👉🏾👉🏾 your answer here]
+In the short run we plan on adding more to this project and making it look nicer since we weren't able to due to time contraints. In the long run we plan on learning more about backend development and implement other features such as user authentication and more.

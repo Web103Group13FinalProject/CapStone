@@ -27,31 +27,43 @@ Backend: Node.js, Express, PostgreSQL
 
 The app should have a home page that displays the app's name and a list of the cups.   
 
-[Add gif]
+![Home Page](../milestone_assets/home_page.png)
 
-### Add Page ✅
+### Create Cup ✅
 
-The app should have an add page where the user fills out information for the properties of the cup.   
+The app should have an create cup button that takes the user to create the cup.   
 
-[Add gif]
+![Create Menu](../milestone_assets/create_cup.gif)
+
+### Prompt User with options ✅
+
+When creating a cup, the app will ask the user regarding different descriptions of the cup one page at a time.   
+
+![Cup Customization Options](../milestone_assets/options.gif)
+
+### Account for Logic Error ✅
+
+When creating a cup, if the user chooses a large cup size, the app will not allow the user to choose a lid with a different size.   
+
+![Invalid Cup Entry](../milestone_assets/invalid_entry.gif)
 
 ### View Cups Individually ✅
 
 The app should allow users to viwe the cups individually and have prompts to edit or delete the cup.
 
-[Add gif]
+![View Cups Individually](../milestone_assets/view_cups.gif)
 
 ### Edit Cup UI ✅
 
 The app should have some interface to edit the cup.   
 
-[Add gif]
+![Edit Cup menu](../milestone_assets/edit_ui.gif)
 
 ### Delete Cup ✅
 
 The app should allow the user to delete a cup.   
 
-[Add gif]
+![Delete cup](../milestone_assets/delete_cup.gif)
 
 
 ## Installation Instructions
