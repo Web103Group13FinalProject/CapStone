@@ -8,7 +8,7 @@ This unit, be sure to complete all tasks listed below. To complete a task, place
 
 - [x] Deploy your project on Railway
   - [x] In `readme.md`, add the link to your deployed project
-- [ ] Update the status of issues in your project board as you complete them
+- [x] Update the status of issues in your project board as you complete them
 - [x] In `readme.md`, check off the features you have completed in this unit by adding a ✅ emoji in front of their title
   - [x] Under each feature you have completed, **include a GIF** showing feature functionality
 - [x] In this document, complete the **Reflection** section below
@@ -49,9 +49,9 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 
 - [ ] The project gracefully handles errors
 - [ ] The project includes a one-to-one database relationship
-- [ ] The project includes a slide-out pane or modal as appropriate for your use case
+- [x] The project includes a slide-out pane or modal as appropriate for your use case
 - [ ] The project includes a unique field within the join table
-- [x] The project includes a custom non-RESTful route with corresponding controller actions
+- [ ] The project includes a custom non-RESTful route with corresponding controller actions
 - [ ] The project allows filtering and/or sorting as appropriate for your use case
 - [ ] Data is automatically generated in response to a certain event or user action. Examples include generating a default inventory for a new user starting a game or creating a starter set of tasks for a user creating a new task app account
 - [x] Data submitted via a POST or PATCH request is validated before the database is updated
